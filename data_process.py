@@ -20,6 +20,8 @@ def remove_column(data, col_index):
         del row[col_index]
     return data
 
-a = read_csv('books_modified.csv')
+a = read_csv('new.csv')
 
-print_table(a[:100])
+a = remove_column(a, -1)
+
+write_csv('new.csv', a)
