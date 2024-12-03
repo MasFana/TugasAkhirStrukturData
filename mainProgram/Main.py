@@ -35,3 +35,5 @@ while True:
     #     print(buku[i[0]])
     
     input("\nTekan Enter untuk melanjutkan...")
+    
+    

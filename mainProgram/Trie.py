@@ -6,7 +6,7 @@ class TrieNode:
     def __init__(self):
         self.children = {}
         self.is_end_of_word = False
-        self.key = []  # Menyimpan kata dalam case aslinya
+        self.key = []  # Menyimpan Key dari Buku
 
 class Trie:
     def __init__(self):
@@ -32,10 +32,11 @@ class Trie:
         return self._autocomplete(node)
 
     def _autocomplete(self, node):
+        # Trie Disini hanya untuk mengambil semua Key
         suggestions = []
         if node.is_end_of_word:
             suggestions.extend(node.key)  # Ambil semua key dari simpul ini
-
+            
         for char, child_node in node.children.items():
             suggestions.extend(self._autocomplete(node=child_node))
         return suggestions
