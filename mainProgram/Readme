@@ -1,3 +1,5 @@
+Source : https://hg.python.org/cpython/file/10eea15880db/Objects/dictobject.c
+
 In Python, a dict (short for dictionary) is implemented as a hash table. 
 
     Hashing the Key:
