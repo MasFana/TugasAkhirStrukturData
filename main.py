@@ -1,5 +1,4 @@
 import csv 
-import tabulate
 
 class TrieNode:
     def __init__(self):
