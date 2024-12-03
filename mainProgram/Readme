@@ -1,6 +1,8 @@
-Source : https://hg.python.org/cpython/file/10eea15880db/Objects/dictobject.c
+Source :    https://hg.python.org/cpython/file/10eea15880db/Objects/dictobject.c (Source Code Dict Python)
+            https://en.wikipedia.org/wiki/Hash_table (Hash Table)
+            https://stackoverflow.com/questions/114830/is-a-python-dictionary-an-example-of-a-hash-table
 
-In Python, a dict (short for dictionary) is implemented as a hash table. 
+In Python, a dict (short for dictionary) is implemented as a hash and Hash Table. 
 
     Hashing the Key:
 
@@ -35,3 +37,25 @@ Key Points:
     Collision Handling:
 
         Python handles collisions (multiple keys with the same hash) using a technique called open addressing or similar.
+
+-----------------------------------------------------------------------------------------------------------
+
+Hash Table:
+
+    Definition: An abstract data type that implements an associative array, a structure that can map keys to values.
+
+    Key-Value Pair: Stores key-value pairs and uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+
+    Thread-Safety: Generally not thread-safe. Synchronization is required to make operations thread-safe.
+
+    Collision Handling: Uses techniques like chaining (where each bucket's slot contains a list of items) or open addressing (where collisions are resolved by probing).
+
+Hash Map:
+
+    Definition: A specific implementation of the hash table. It's a collection type that maps keys to values.
+
+    Languages: Frequently used in object-oriented languages such as Java (HashMap), Python (dict), and C++ (unordered_map).
+
+    Thread-Safety: Not thread-safe by default. For Java, ConcurrentHashMap is used for a thread-safe version.
+
+    Collision Handling: Typically handled using chaining or open addressing, similar to hash tables.
