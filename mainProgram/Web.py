@@ -20,11 +20,11 @@ for key, value in buku.items():
 def search(nama):
     print(nama)
     if not nama:
-        return jsonify({'error': 'Query parameter is required'}), 400
+        return jsonify({'error': 'Kasih Nama Buku Le'}), 400
     
     results = trie.search(nama)
     if not results:
-        return jsonify({'message': 'No results found'}), 404
+        return jsonify({'error': 'Not Found'}), 404
     results = [buku[i[0]] for i in results[:10]]
     return jsonify({'results': results})
     
