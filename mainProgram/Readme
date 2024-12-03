@@ -1,0 +1,35 @@
+In Python, a dict (short for dictionary) is implemented as a hash table. 
+
+    Hashing the Key:
+
+        When you access a key in a dictionary, Python computes the hash value of the key using the hash() function.
+        This hash value is a numerical representation of the key and is used to determine where the value associated with the key is stored in the hash table.
+
+    Index Calculation:
+
+        Python maps the hash value to an index in an internal array (the hash table). This mapping ensures that each hash value corresponds to a unique bucket (or slot) in the table.
+
+    Key Matching:
+
+        Python checks the bucket corresponding to the computed index. If multiple keys collide (have the same hash or index), Python performs a linear search or other collision resolution to find the exact key.
+
+        To verify the correct key, Python compares the queried key with keys in the bucket using the __eq__ method.
+
+    Return the Value:
+
+        Once the correct key is found, Python retrieves and returns the associated value from the bucket.
+
+
+Key Points:
+
+    Hashable Keys:
+
+        Keys must be immutable (like strings, numbers, tuples) because the hash value of a key must not change during its lifetime in the dictionary.
+    
+    Performance:
+
+        Key lookup in a dict is O(1) on average because hashing and array indexing are fast. However, in the case of many hash collisions, it can degrade to O(n).
+
+    Collision Handling:
+
+        Python handles collisions (multiple keys with the same hash) using a technique called open addressing or similar.
