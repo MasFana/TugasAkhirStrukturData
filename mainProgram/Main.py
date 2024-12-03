@@ -12,7 +12,6 @@ for key, value in buku.items():
     # Memasukkan Judul dan Key Buku ke Trie
     trie.insert(value['Judul'], key)
     
-
 while True:
     Clear()
     print(r"""
@@ -27,10 +26,12 @@ while True:
     
     keyword = input("Masukkan kata kunci : ")
     suggestions = trie.search(keyword)
+    
     # print(suggestions)
     
     print_table([buku[i[0]] for i in suggestions])
     
     # for i in suggestions:
     #     print(buku[i[0]])
+    
     input("\nTekan Enter untuk melanjutkan...")
