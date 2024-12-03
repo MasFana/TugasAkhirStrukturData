@@ -1,13 +1,8 @@
 # Inisialisasi Trie
-from unittest import result
-from sklearn.utils import resample
 from Trie import Trie, Data
 from flask import Flask, jsonify,render_template
-from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Inisialisasi Trie dan HashMap
 data = Data()
